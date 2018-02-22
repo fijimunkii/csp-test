@@ -73,4 +73,11 @@ Promise.resolve().then(() => {
   object.data = evilUrl;
   document.body.appendChild(object);
 
+  // X-DNS-Prefetch-Control header
+  console.log('TODO prefetch');
+  var link = document.createElement('link');
+  link.rel = 'prefetch';
+  link.href = evilUrl;
+  document.head.appendChild(link);
+
 });
